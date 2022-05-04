@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"bPCtS":[function(require,module,exports) {
+})({"duSAg":[function(require,module,exports) {
 "use strict";
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -527,31 +527,53 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"bZL5y":[function(require,module,exports) {
 const main = document.querySelector(".main");
-const url = `https://pokeapi.co/api/v2/pokemon/1`;
 const pokemonDetails = document.createElement("div");
-main.append(pokemonDetails);
+if (main) main.append(pokemonDetails);
 function addPokemonDetails(pokemon) {
     pokemonDetails.innerHTML = `
         <figure class="detail-figure">
             <img src=${pokemon.sprites.front_default} alt=${pokemon.name} class="detail-image" />
             <figcaption class="detail-figcaption">${pokemon.name}</figcaption>
         </figure>
-        <h2>Abilities</h2>
         <h3>Weight: ${pokemon.weight}</h3>
         <h3>Height: ${pokemon.height}</h3>
+        <h2>Abilities</h2>
+
     `;
 }
-fetch(url).then((response)=>{
+function addPokemonAbilities(pokemon) {
+    const abilitiesList = document.createElement("ul");
+    abilitiesList.classList.add("abilities");
+    if (pokemonDetails) pokemonDetails.append(abilitiesList);
+    Promise.all(pokemon.abilities.map((ability)=>ability.ability.url
+    ).map((url)=>fetch(url).then((response)=>response.json()
+        )
+    )).then((responses)=>responses.forEach((response)=>{
+            const li = document.createElement("li");
+            li.innerHTML = `
+                <span class="ability-name">${response.name}</span>
+                <span class="ability-short-description">${response.effect_entries.find((effect)=>{
+                return effect.language.name === "en";
+            }).short_effect}</span>
+            `;
+            if (abilitiesList) abilitiesList.append(li);
+        })
+    );
+}
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+fetch(`https://pokeapi.co/api/v2/pokemon/${urlParams.get("pokemon")}`).then((response)=>{
     return response.json();
 }).then((parsedResponse)=>{
     console.log(parsedResponse);
     addPokemonDetails(parsedResponse);
+    addPokemonAbilities(parsedResponse);
 }).catch((error)=>{
     const p = document.createElement("p");
     p.textContent = "You blacked out!";
     main.append(p);
 });
 
-},{}]},["bPCtS","bZL5y"], "bZL5y", "parcelRequire80db")
+},{}]},["duSAg","bZL5y"], "bZL5y", "parcelRequire80db")
 
 //# sourceMappingURL=pokemon.c5706913.js.map
