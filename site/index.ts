@@ -1,3 +1,4 @@
+import { titleCase } from "../site/utilities"
 const pokeApiUrl = `https://pokeapi.co/api/v2/pokemon?limit=51`
 const pokemon = document.querySelector<HTMLUListElement>(".pokemon")
 
@@ -19,11 +20,7 @@ type PokemonData = {
     };
 }
 
-export function titleCase(string: string) {
-    return string.toLowerCase().split("-").map(word => {
-        return word.charAt(0).toUpperCase() + word.slice(1)
-    }).join(" ")
-}
+
 
 fetch(pokeApiUrl)
     .then(response => response.json())
