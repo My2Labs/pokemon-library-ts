@@ -584,6 +584,7 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${urlParams.get("pokemon")}`).then((res
     const p = document.createElement("p");
     p.textContent = "You blacked out!";
     main.append(p);
+    console.error(error.message);
 });
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"ex4Dd"}],"ex4Dd":[function(require,module,exports) {
