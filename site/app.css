@@ -17,7 +17,17 @@ li {
 }
 
 body {
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    margin: 0%;
+    width: 100%;
     display: grid;
+    font-size: 16px;
+    background: url(body_bg.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 div {
