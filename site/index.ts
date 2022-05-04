@@ -19,7 +19,7 @@ type PokemonData = {
     };
 }
 
-function titleCase(string: string) {
+export function titleCase(string: string) {
     return string.toLowerCase().split("-").map(word => {
         return word.charAt(0).toUpperCase() + word.slice(1)
     }).join(" ")
@@ -40,9 +40,15 @@ fetch(pokeApiUrl)
         const loading = document.querySelector(".loading")
         loading.classList.add("hidden")
     })
+    .catch(error => {
+        const p = document.createElement("p")
+        p.textContent = "You blacked out!"
+        pokemon.append(p)
+        console.error(error.message)
+    })
 
 
-function createPokemonListing(pokemon: PokemonData) {
+export function createPokemonListing(pokemon: PokemonData) {
     const li = document.createElement("li")
     li.innerHTML = `
         <div class="pokemon-listing">
@@ -55,6 +61,7 @@ function createPokemonListing(pokemon: PokemonData) {
     return li
 }
 
-function addPokemonListing(listing: HTMLLIElement) {
+export function addPokemonListing(listing: HTMLLIElement) {
     pokemon.append(listing)
 }
+
