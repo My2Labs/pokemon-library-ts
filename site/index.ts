@@ -2,7 +2,6 @@ const pokeApiUrl = `https://pokeapi.co/api/v2/pokemon?limit=50`
 const div = document.querySelector<HTMLDivElement>("div")
 const pokemon = document.querySelector<HTMLUListElement>(".pokemon")
 
-const loading = document.querySelector(".loading")
 
 type PokemonList = {
     results: Pokemon[];
@@ -39,7 +38,10 @@ fetch(pokeApiUrl)
         responses.forEach(response => {
             addPokemonListing(createPokemonListing(response))
         })
+        const loading = document.querySelector(".loading")
+        loading.classList.add("hidden")
     })
+
 
 function createPokemonListing(pokemon: PokemonData) {
     const li = document.createElement("li")

@@ -573,6 +573,8 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${urlParams.get("pokemon")}`).then((res
     console.log(parsedResponse);
     addPokemonDetails(parsedResponse);
     addPokemonAbilities(parsedResponse);
+    const loading = document.querySelector(".loading");
+    loading.classList.add("hidden");
 }).catch((error)=>{
     const p = document.createElement("p");
     p.textContent = "You blacked out!";

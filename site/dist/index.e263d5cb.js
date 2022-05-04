@@ -529,7 +529,6 @@ function hmrAcceptRun(bundle, id) {
 const pokeApiUrl = `https://pokeapi.co/api/v2/pokemon?limit=50`;
 const div = document.querySelector("div");
 const pokemon = document.querySelector(".pokemon");
-const loading = document.querySelector(".loading");
 function titleCase(string) {
     return string.toLowerCase().split("-").map((word)=>{
         return word.charAt(0).toUpperCase() + word.slice(1);
@@ -548,6 +547,8 @@ fetch(pokeApiUrl).then((response)=>response.json()
     responses.forEach((response)=>{
         addPokemonListing(createPokemonListing(response));
     });
+    const loading = document.querySelector(".loading");
+    loading.classList.add("hidden");
 });
 function createPokemonListing(pokemon1) {
     const li = document.createElement("li");

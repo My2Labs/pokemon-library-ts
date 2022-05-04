@@ -1,3 +1,40 @@
+.hidden {
+  display: none;
+}
 
+img, ul {
+  width: 90%;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 0 0 40px;
+}
+
+body {
+  display: grid;
+}
+
+div {
+  text-align: center;
+  color: #fff;
+}
+
+figure {
+  width: 150px;
+}
+
+figcaption {
+  color: #a4a4eb;
+}
+
+p {
+  width: 90%;
+  text-align: center;
+}
 
 /*# sourceMappingURL=pokemon.e03e9bb3.css.map */
