@@ -23,7 +23,11 @@ type PokemonInfo = {
     abilities: Ability[];
 }
 
-
+function titleCase(string: string) {
+    return string.toLowerCase().split("-").map(word => {
+        return word.charAt(0).toUpperCase() + word.slice(1)
+    }).join(" ")
+}
 
 const pokemonDetails = document.createElement("div")
 if (main) {
@@ -34,7 +38,7 @@ function addPokemonDetails(pokemon: PokemonInfo) {
     pokemonDetails.innerHTML = `
         <figure class="detail-figure">
             <img src=${pokemon.sprites.front_default} alt=${pokemon.name} class="detail-image" />
-            <figcaption class="detail-figcaption">${pokemon.name}</figcaption>
+            <figcaption class="detail-figcaption">${titleCase(pokemon.name)}</figcaption>
         </figure>
         <h3>Weight: ${pokemon.weight}</h3>
         <h3>Height: ${pokemon.height}</h3>
@@ -56,7 +60,7 @@ function addPokemonAbilities(pokemon: PokemonInfo) {
         .then(responses => responses.forEach(response => {
             const li = document.createElement("li")
             li.innerHTML = `
-                <span class="ability-name">${response.name}</span>
+                <span class="ability-name">${titleCase(response.name)}</span>
                 <span class="ability-short-description">${response.effect_entries.find(effect => {
                 return effect.language.name === "en"
             }).short_effect}</span>

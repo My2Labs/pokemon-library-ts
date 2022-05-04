@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"duSAg":[function(require,module,exports) {
+})({"bPCtS":[function(require,module,exports) {
 "use strict";
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -527,13 +527,18 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"bZL5y":[function(require,module,exports) {
 const main = document.querySelector(".main");
+function titleCase(string) {
+    return string.toLowerCase().split("-").map((word)=>{
+        return word.charAt(0).toUpperCase() + word.slice(1);
+    }).join(" ");
+}
 const pokemonDetails = document.createElement("div");
 if (main) main.append(pokemonDetails);
 function addPokemonDetails(pokemon) {
     pokemonDetails.innerHTML = `
         <figure class="detail-figure">
             <img src=${pokemon.sprites.front_default} alt=${pokemon.name} class="detail-image" />
-            <figcaption class="detail-figcaption">${pokemon.name}</figcaption>
+            <figcaption class="detail-figcaption">${titleCase(pokemon.name)}</figcaption>
         </figure>
         <h3>Weight: ${pokemon.weight}</h3>
         <h3>Height: ${pokemon.height}</h3>
@@ -551,7 +556,7 @@ function addPokemonAbilities(pokemon) {
     )).then((responses)=>responses.forEach((response)=>{
             const li = document.createElement("li");
             li.innerHTML = `
-                <span class="ability-name">${response.name}</span>
+                <span class="ability-name">${titleCase(response.name)}</span>
                 <span class="ability-short-description">${response.effect_entries.find((effect)=>{
                 return effect.language.name === "en";
             }).short_effect}</span>
@@ -574,6 +579,6 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${urlParams.get("pokemon")}`).then((res
     main.append(p);
 });
 
-},{}]},["duSAg","bZL5y"], "bZL5y", "parcelRequire80db")
+},{}]},["bPCtS","bZL5y"], "bZL5y", "parcelRequire80db")
 
 //# sourceMappingURL=pokemon.c5706913.js.map

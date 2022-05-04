@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"5bzfO":[function(require,module,exports) {
+})({"aeLtt":[function(require,module,exports) {
 "use strict";
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -529,6 +529,12 @@ function hmrAcceptRun(bundle, id) {
 const pokeApiUrl = `https://pokeapi.co/api/v2/pokemon?limit=50`;
 const div = document.querySelector("div");
 const pokemon = document.querySelector(".pokemon");
+const loading = document.querySelector(".loading");
+function titleCase(string) {
+    return string.toLowerCase().split("-").map((word)=>{
+        return word.charAt(0).toUpperCase() + word.slice(1);
+    }).join(" ");
+}
 fetch(pokeApiUrl).then((response)=>response.json()
 ).then((allPokemon)=>{
     console.log(allPokemon);
@@ -549,7 +555,7 @@ function createPokemonListing(pokemon1) {
         <div class="pokemon-listing">
             <a href="pokemon.html?pokemon=${pokemon1.id}"><figure>
                 <img src=${pokemon1.sprites.front_default} alt=${pokemon1.name} />
-                <figcaption>${pokemon1.name}</figcaption>
+                <figcaption>${titleCase(pokemon1.name)}</figcaption>
             </figure></a>
         </div>
     `;
@@ -559,6 +565,6 @@ function addPokemonListing(listing) {
     pokemon.append(listing);
 }
 
-},{}]},["5bzfO","6gRYP"], "6gRYP", "parcelRequire80db")
+},{}]},["aeLtt","6gRYP"], "6gRYP", "parcelRequire80db")
 
 //# sourceMappingURL=index.e263d5cb.js.map

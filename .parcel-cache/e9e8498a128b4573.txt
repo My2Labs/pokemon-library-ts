@@ -1,15 +1,15 @@
 7469
 50/home/sking171/PokeTS/pokemon-library-ts/.eslintrc1651677461332365400 0
-61/home/sking171/PokeTS/pokemon-library-ts/site/dist/index.html1651678280832365400 0
-72/home/sking171/PokeTS/pokemon-library-ts/site/dist/index.e263d5cb.js.map1651680227442365400 0
+61/home/sking171/PokeTS/pokemon-library-ts/site/dist/index.html1651684838012365400 0
+72/home/sking171/PokeTS/pokemon-library-ts/site/dist/index.e263d5cb.js.map1651685215282365400 0
 75/home/sking171/PokeTS/pokemon-library-ts/site/dist/pokemon.e03e9bb3.css.map1651681971582365400 0
 71/home/sking171/PokeTS/pokemon-library-ts/site/dist/pokemon.e03e9bb3.css1651681971582365400 0
 69/home/sking171/PokeTS/pokemon-library-ts/site/dist/index.e03e9bb3.css1651678281262365400 0
 73/home/sking171/PokeTS/pokemon-library-ts/site/dist/index.e03e9bb3.css.map1651678281262365400 0
-68/home/sking171/PokeTS/pokemon-library-ts/site/dist/index.e263d5cb.js1651680227422365400 0
-50/home/sking171/PokeTS/pokemon-library-ts/site/dist1651682761792365400 1
-56/home/sking171/PokeTS/pokemon-library-ts/site/pokemon.ts1651682761642365400 0
-58/home/sking171/PokeTS/pokemon-library-ts/site/pokemon.html1651682216422365400 0
+68/home/sking171/PokeTS/pokemon-library-ts/site/dist/index.e263d5cb.js1651685215272365400 0
+50/home/sking171/PokeTS/pokemon-library-ts/site/dist1651685215282365400 1
+56/home/sking171/PokeTS/pokemon-library-ts/site/pokemon.ts1651685105712365400 0
+58/home/sking171/PokeTS/pokemon-library-ts/site/pokemon.html1651685337872365400 0
 50/home/sking171/PokeTS/pokemon-library-ts/README.md1651675749172365400 0
 53/home/sking171/PokeTS/pokemon-library-ts/package.json1651677461342365400 0
 55/home/sking171/PokeTS/pokemon-library-ts/.tsconfig.json1651677461342365400 0
@@ -517,7 +517,7 @@
 107/home/sking171/PokeTS/pokemon-library-ts/node_modules/caniuse-lite/data/features/stricttransportsecurity.js1651676109262365400 0
 85/home/sking171/PokeTS/pokemon-library-ts/node_modules/caniuse-lite/data/regions/QA.js1651676109102365400 0
 98/home/sking171/PokeTS/pokemon-library-ts/node_modules/caniuse-lite/data/features/filereadersync.js1651676108242365400 0
-56/home/sking171/PokeTS/pokemon-library-ts/site/index.html1651678154242365400 0
+56/home/sking171/PokeTS/pokemon-library-ts/site/index.html1651685312232365400 0
 104/home/sking171/PokeTS/pokemon-library-ts/node_modules/caniuse-lite/data/features/intersectionobserver.js1651676108622365400 0
 90/home/sking171/PokeTS/pokemon-library-ts/node_modules/caniuse-lite/data/browserVersions.js1651676105982365400 0
 71/home/sking171/PokeTS/pokemon-library-ts/node_modules/caniuse-lite/data1651676108192365400 1
@@ -1732,7 +1732,7 @@
 89/home/sking171/PokeTS/pokemon-library-ts/node_modules/eslint/lib/rules/callback-return.js1651676623912365400 0
 86/home/sking171/PokeTS/pokemon-library-ts/node_modules/eslint/lib/rules/comma-dangle.js1651676624142365400 0
 64/home/sking171/PokeTS/pokemon-library-ts/node_modules/terser/bin1651676106942365400 1
-70/home/sking171/PokeTS/pokemon-library-ts/site/dist/pokemon.c5706913.js1651682761792365400 0
+70/home/sking171/PokeTS/pokemon-library-ts/site/dist/pokemon.c5706913.js1651685096352365400 0
 85/home/sking171/PokeTS/pokemon-library-ts/node_modules/functional-red-black-tree/bench1651676623232365400 1
 75/home/sking171/PokeTS/pokemon-library-ts/node_modules/js-yaml/lib/schema.js1651676623892365400 0
 88/home/sking171/PokeTS/pokemon-library-ts/node_modules/eslint/lib/rules/accessor-pairs.js1651676623072365400 0
@@ -1789,7 +1789,7 @@
 76/home/sking171/PokeTS/pokemon-library-ts/node_modules/typescript/loc/lcl/PTB1651676233302365400 1
 97/home/sking171/PokeTS/pokemon-library-ts/node_modules/eslint/lib/rules/no-unexpected-multiline.js1651676625172365400 0
 88/home/sking171/PokeTS/pokemon-library-ts/node_modules/eslint/lib/rules/no-cond-assign.js1651676624832365400 0
-45/home/sking171/PokeTS/pokemon-library-ts/site1651680172002365400 1
+45/home/sking171/PokeTS/pokemon-library-ts/site1651684763622365400 1
 63/home/sking171/PokeTS/pokemon-library-ts/node_modules/@trysound1651676098592365400 1
 90/home/sking171/PokeTS/pokemon-library-ts/node_modules/eslint/lib/rules/no-sparse-arrays.js1651676625142365400 0
 124/home/sking171/PokeTS/pokemon-library-ts/node_modules/@typescript-eslint/scope-manager/dist/definition/VariableDefinition.js1651676624422365400 0
@@ -3010,7 +3010,7 @@
 102/home/sking171/PokeTS/pokemon-library-ts/node_modules/@parcel/runtime-browser-hmr/src/loaders/.babelrc1651676103062365400 0
 119/home/sking171/PokeTS/pokemon-library-ts/node_modules/@typescript-eslint/eslint-plugin/dist/rules/no-misused-new.js.map1651676625152365400 0
 128/home/sking171/PokeTS/pokemon-library-ts/node_modules/@typescript-eslint/scope-manager/dist/lib/webworker.importscripts.d.ts.map1651676625072365400 0
-74/home/sking171/PokeTS/pokemon-library-ts/site/dist/pokemon.c5706913.js.map1651682761792365400 0
+74/home/sking171/PokeTS/pokemon-library-ts/site/dist/pokemon.c5706913.js.map1651685096372365400 0
 74/home/sking171/PokeTS/pokemon-library-ts/node_modules/flatted/package.json1651676623512365400 0
 71/home/sking171/PokeTS/pokemon-library-ts/node_modules/acorn-jsx/LICENSE1651676622672365400 0
 72/home/sking171/PokeTS/pokemon-library-ts/node_modules/timsort/LICENSE.md1651676101492365400 0
@@ -4449,7 +4449,7 @@
 124/home/sking171/PokeTS/pokemon-library-ts/node_modules/@typescript-eslint/typescript-estree/dist/create-program/shared.js.map1651676624312365400 0
 102/home/sking171/PokeTS/pokemon-library-ts/node_modules/@swc/helpers/src/_initializer_define_property.js1651676106602365400 0
 131/home/sking171/PokeTS/pokemon-library-ts/node_modules/@typescript-eslint/scope-manager/dist/definition/ImportBindingDefinition.d.ts1651676625282365400 0
-63/home/sking171/PokeTS/pokemon-library-ts/site/dist/pokemon.html1651682216662365400 0
+63/home/sking171/PokeTS/pokemon-library-ts/site/dist/pokemon.html1651684838202365400 0
 159/home/sking171/PokeTS/pokemon-library-ts/node_modules/typescript/loc/lcl/KOR/TypeScriptLanguageService/Microsoft.CodeAnalysis.TypeScript.EditorFeatures.dll.lcl1651676233162365400 0
 91/home/sking171/PokeTS/pokemon-library-ts/node_modules/@swc/helpers/src/_get_prototype_of.js1651676106572365400 0
 93/home/sking171/PokeTS/pokemon-library-ts/node_modules/@nodelib/fs.walk/out/readers/async.d.ts1651676623672365400 0
@@ -4787,7 +4787,7 @@
 116/home/sking171/PokeTS/pokemon-library-ts/node_modules/@typescript-eslint/scope-manager/dist/lib/es2017.full.d.ts.map1651676624632365400 0
 98/home/sking171/PokeTS/pokemon-library-ts/node_modules/@typescript-eslint/utils/dist/index.d.ts.map1651676624252365400 0
 113/home/sking171/PokeTS/pokemon-library-ts/node_modules/@typescript-eslint/scope-manager/dist/lib/esnext.promise.js1651676624212365400 0
-54/home/sking171/PokeTS/pokemon-library-ts/site/index.ts1651680172002365400 0
+54/home/sking171/PokeTS/pokemon-library-ts/site/index.ts1651685215102365400 0
 112/home/sking171/PokeTS/pokemon-library-ts/node_modules/@typescript-eslint/scope-manager/dist/lib/base-config.d.ts1651676625102365400 0
 72/home/sking171/PokeTS/pokemon-library-ts/node_modules/tsutils/index.d.ts1651676624212365400 0
 126/home/sking171/PokeTS/pokemon-library-ts/node_modules/@typescript-eslint/scope-manager/dist/definition/DefinitionBase.d.ts.map1651676624532365400 0

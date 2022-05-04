@@ -2,6 +2,8 @@ const pokeApiUrl = `https://pokeapi.co/api/v2/pokemon?limit=50`
 const div = document.querySelector<HTMLDivElement>("div")
 const pokemon = document.querySelector<HTMLUListElement>(".pokemon")
 
+const loading = document.querySelector(".loading")
+
 type PokemonList = {
     results: Pokemon[];
 }
@@ -17,6 +19,12 @@ type PokemonData = {
     sprites: {
         front_default: string;
     };
+}
+
+function titleCase(string: string) {
+    return string.toLowerCase().split("-").map(word => {
+        return word.charAt(0).toUpperCase() + word.slice(1)
+    }).join(" ")
 }
 
 fetch(pokeApiUrl)
@@ -39,7 +47,7 @@ function createPokemonListing(pokemon: PokemonData) {
         <div class="pokemon-listing">
             <a href="pokemon.html?pokemon=${pokemon.id}"><figure>
                 <img src=${pokemon.sprites.front_default} alt=${pokemon.name} />
-                <figcaption>${pokemon.name}</figcaption>
+                <figcaption>${titleCase(pokemon.name)}</figcaption>
             </figure></a>
         </div>
     `
