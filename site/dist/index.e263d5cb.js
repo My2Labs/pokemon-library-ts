@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"aeLtt":[function(require,module,exports) {
+})({"5bzfO":[function(require,module,exports) {
 "use strict";
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -528,11 +528,37 @@ function hmrAcceptRun(bundle, id) {
 },{}],"6gRYP":[function(require,module,exports) {
 const pokeApiUrl = `https://pokeapi.co/api/v2/pokemon?limit=50`;
 const div = document.querySelector("div");
+const pokemon = document.querySelector(".pokemon");
 fetch(pokeApiUrl).then((response)=>response.json()
-).then((response)=>{
-    console.log(response);
+).then((allPokemon)=>{
+    console.log(allPokemon);
+    const urls = allPokemon.results.map((result)=>result.url
+    );
+    const fetches = urls.map((url)=>fetch(url).then((response)=>response.json()
+        )
+    );
+    return Promise.all(fetches);
+}).then((responses)=>{
+    responses.forEach((response)=>{
+        addPokemonListing(createPokemonListing(response));
+    });
 });
+function createPokemonListing(pokemon1) {
+    const li = document.createElement("li");
+    li.innerHTML = `
+        <div class="pokemon-listing">
+            <a href="pokemon.html?pokemon=${pokemon1.id}"><figure>
+                <img src=${pokemon1.sprites.front_default} alt=${pokemon1.name} />
+                <figcaption>${pokemon1.name}</figcaption>
+            </figure></a>
+        </div>
+    `;
+    return li;
+}
+function addPokemonListing(listing) {
+    pokemon.append(listing);
+}
 
-},{}]},["aeLtt","6gRYP"], "6gRYP", "parcelRequire80db")
+},{}]},["5bzfO","6gRYP"], "6gRYP", "parcelRequire80db")
 
 //# sourceMappingURL=index.e263d5cb.js.map
