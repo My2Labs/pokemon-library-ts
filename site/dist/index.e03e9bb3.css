@@ -16,13 +16,17 @@ li {
 }
 
 body {
-  color: #000;
   width: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background: url("body_bg.e43a8ae8.png") center / cover no-repeat fixed;
+  background: silver url("body_bg.e43a8ae8.png") center / cover no-repeat fixed;
+  grid-template-rows: 15em;
+  grid-template-columns: 5% 30% 30% 30% 5%;
+  place-items: center;
+  gap: 10px;
   margin: 0%;
+  padding: 10px;
   font-family: Courier New, Courier, monospace;
   font-size: 16px;
   display: grid;
@@ -31,6 +35,7 @@ body {
 div {
   text-align: center;
   color: #fff;
+  display: grid;
 }
 
 figure {
