@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"5bzfO":[function(require,module,exports) {
+})({"aeLtt":[function(require,module,exports) {
 "use strict";
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -526,7 +526,13 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"6gRYP":[function(require,module,exports) {
+const pokeApiUrl = `https://pokeapi.co/api/v2/pokemon?limit=50`;
+const div = document.querySelector("div");
+fetch(pokeApiUrl).then((response)=>response.json()
+).then((response)=>{
+    console.log(response);
+});
 
-},{}]},["5bzfO","6gRYP"], "6gRYP", "parcelRequire80db")
+},{}]},["aeLtt","6gRYP"], "6gRYP", "parcelRequire80db")
 
 //# sourceMappingURL=index.e263d5cb.js.map
