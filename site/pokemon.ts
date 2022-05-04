@@ -1,6 +1,6 @@
 const main = document.querySelector<HTMLDivElement>(".main")
 
-
+export { }
 
 type Ability = {
     ability: {
@@ -40,16 +40,19 @@ function addPokemonDetails(pokemon: PokemonInfo) {
             <img src=${pokemon.sprites.front_default} alt=${pokemon.name} class="detail-image" />
             <figcaption class="detail-figcaption">${titleCase(pokemon.name)}</figcaption>
         </figure>
-        <h3>Weight: ${pokemon.weight}</h3>
-        <h3>Height: ${pokemon.height}</h3>
-        <h2>Abilities</h2>
-
+        <div class="pokemon-details">
+            <h3>Weight: ${pokemon.weight}</h3>
+            <h3>Height: ${pokemon.height}</h3>
+        </div>
     `
 }
 
 function addPokemonAbilities(pokemon: PokemonInfo) {
     const abilitiesList = document.createElement("ul")
     abilitiesList.classList.add("abilities")
+    abilitiesList.innerHTML = `
+        <h2>Abilities</h2>
+    `
     if (pokemonDetails) {
         pokemonDetails.append(abilitiesList)
     }

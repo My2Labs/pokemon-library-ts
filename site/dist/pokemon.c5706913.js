@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"bPCtS":[function(require,module,exports) {
+})({"duSAg":[function(require,module,exports) {
 "use strict";
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -526,6 +526,8 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"bZL5y":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
 const main = document.querySelector(".main");
 function titleCase(string) {
     return string.toLowerCase().split("-").map((word)=>{
@@ -540,15 +542,18 @@ function addPokemonDetails(pokemon) {
             <img src=${pokemon.sprites.front_default} alt=${pokemon.name} class="detail-image" />
             <figcaption class="detail-figcaption">${titleCase(pokemon.name)}</figcaption>
         </figure>
-        <h3>Weight: ${pokemon.weight}</h3>
-        <h3>Height: ${pokemon.height}</h3>
-        <h2>Abilities</h2>
-
+        <div class="pokemon-details">
+            <h3>Weight: ${pokemon.weight}</h3>
+            <h3>Height: ${pokemon.height}</h3>
+        </div>
     `;
 }
 function addPokemonAbilities(pokemon) {
     const abilitiesList = document.createElement("ul");
     abilitiesList.classList.add("abilities");
+    abilitiesList.innerHTML = `
+        <h2>Abilities</h2>
+    `;
     if (pokemonDetails) pokemonDetails.append(abilitiesList);
     Promise.all(pokemon.abilities.map((ability)=>ability.ability.url
     ).map((url)=>fetch(url).then((response)=>response.json()
@@ -581,6 +586,36 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${urlParams.get("pokemon")}`).then((res
     main.append(p);
 });
 
-},{}]},["bPCtS","bZL5y"], "bZL5y", "parcelRequire80db")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ex4Dd"}],"ex4Dd":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, '__esModule', {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === 'default' || key === '__esModule' || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}]},["duSAg","bZL5y"], "bZL5y", "parcelRequire80db")
 
 //# sourceMappingURL=pokemon.c5706913.js.map

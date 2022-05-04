@@ -5,7 +5,7 @@
 img,
 ul {
     width: 90%;
-    color: white;
+    color: rgb(164, 164, 235);
 }
 
 ul {
@@ -20,26 +20,28 @@ body {
     font-family: 'Courier New', Courier, monospace;
     margin: 0%;
     width: 100%;
-    display: grid;
     font-size: 16px;
     background: url(body_bg.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: rgb(164, 164, 235);
+    background-color: silver;
+}
+
+.pokemon {
+    max-width: 100%;
+    display: grid;
     grid-template-rows: 15em;
-    grid-template-columns: 5% 30% 30% 30% 5%;
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     align-items: center;
-    background-color: silver;
-    padding: 10px;
-    gap: 10px;
 }
 
 div {
     text-align: center;
-    color: white;
-    display: grid;
+    color: rgb(164, 164, 235);
 }
 
 figure {
@@ -53,4 +55,64 @@ figcaption {
 p {
     width: 90%;
     text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(164, 164, 235);
+}
+
+a:hover {
+    color: RGB(32, 148, 131);
+}
+
+figcaption:hover {
+    color: RGB(32, 148, 131);
+}
+
+img {
+    filter: drop-shadow(0 0.7rem 1.5rem rgb(255, 255, 255));
+}
+
+header {
+    text-align: center;
+}
+
+.main > div {
+    display: grid;
+    grid-template-columns: auto 2fr;
+    grid-template-rows: 80px 1fr;
+}
+
+.pokemon-details {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.abilities {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.figure-detail {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+}
+
+.detail-image {
+    max-width: 100%;
+}
+
+.detail-figcaption {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.abilities li {
+    padding-bottom: 18px;
+}
+
+.ability-name {
+    text-decoration: underline;
+    font-weight: 600;
 }

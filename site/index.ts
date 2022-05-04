@@ -1,5 +1,4 @@
-const pokeApiUrl = `https://pokeapi.co/api/v2/pokemon?limit=50`
-const div = document.querySelector<HTMLDivElement>("div")
+const pokeApiUrl = `https://pokeapi.co/api/v2/pokemon?limit=51`
 const pokemon = document.querySelector<HTMLUListElement>(".pokemon")
 
 
